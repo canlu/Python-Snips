@@ -1,0 +1,23 @@
+#Author: canlu
+#Makes text appear to be typed out.
+
+import time
+
+def text_typer(string1, timer, cool_down):
+
+#Clears screen
+  def cls():
+    print("\n" * 60)
+
+#Prints string1 one letter at a time
+  def scrolltalk():
+    x = 0
+    while x < len(string1) + 1:
+      print(string1[:x])
+      x = x + 1
+      time.sleep(timer)
+      cls()
+    print(string1)
+    time.sleep(cool_down)
+
+  scrolltalk()
