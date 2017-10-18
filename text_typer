@@ -3,21 +3,20 @@
 
 import time
 
-def text_typer(string1, timer, cool_down):
+def text_typer(string, interval):
 
 #Clears screen
   def cls():
     print("\n" * 60)
 
-#Prints string1 one letter at a time
+#Prints string one letter at a time
   def scrolltalk():
     x = 0
-    while x < len(string1) + 1:
-      print(string1[:x])
+    while x < len(string) + 1:
+      print(string[:x])
       x = x + 1
-      time.sleep(timer)
+      time.sleep(interval)
       cls()
-    print(string1)
-    time.sleep(cool_down)
+    print(string)
 
   scrolltalk()
